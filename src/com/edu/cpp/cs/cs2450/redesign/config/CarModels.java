@@ -274,7 +274,7 @@ public final class CarModels {
 
 
     static {
-        Map<String, ObservableList<String>> map = Arrays.stream(CarModels.class.getDeclaredFields())
+        final Map<String, ObservableList<String>> map = Arrays.stream(CarModels.class.getDeclaredFields())
                 .filter(f -> Modifier.isStatic(f.getModifiers()))
                 .peek(f -> f.setAccessible(true))
                 .filter(f -> f.getName().endsWith("_MODELS"))
@@ -293,7 +293,7 @@ public final class CarModels {
         return Collections.unmodifiableMap(MODELS);
     }
 
-    public static ObservableList<String> getModels(String make){
+    public static ObservableList<String> getModels(final String make){
         return MODELS.getOrDefault(make, DEFAULT);
     }
 
@@ -301,7 +301,7 @@ public final class CarModels {
         return FXCollections.observableArrayList(MODELS.keySet());
     }
 
-    private static String format(String s){
+    private static String format(final String s){
         return String.format(
                 MODEL_LIST_NAME_FORMAT,
                 s.replace(" ", "_").replace("-", "_").toUpperCase()
@@ -309,7 +309,7 @@ public final class CarModels {
     }
 
     @SuppressWarnings("unchecked")
-    private static ObservableList<String> getFieldValue(Field field){
+    private static ObservableList<String> getFieldValue(final Field field){
         try {
             return (ObservableList<String>) field.get(null);
         } catch (IllegalAccessException e) {

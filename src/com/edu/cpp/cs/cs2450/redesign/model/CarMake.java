@@ -25,7 +25,7 @@ public class CarMake implements Comparable<CarMake> {
     private final Button button;
 
 
-    public CarMake(String name, ImageView image, ImageView logo, String description) {
+    public CarMake(final String name, final ImageView image, final ImageView logo, final String description) {
         this.name = name;
         this.image = image;
         this.logo = logo;
@@ -49,11 +49,11 @@ public class CarMake implements Comparable<CarMake> {
         );
     }
 
-    public CarMake(String name, Image image, Image logo, String description) {
+    public CarMake(final String name, final Image image, final Image logo, final String description) {
         this(name, new ImageView(image), new ImageView(logo), description);
     }
 
-    public CarMake(String name, InputStream image, InputStream logo, String description) {
+    public CarMake(final String name, final InputStream image, final InputStream logo, final String description) {
         this(
                 name,
                 new Image(image),
@@ -62,7 +62,7 @@ public class CarMake implements Comparable<CarMake> {
         );
     }
 
-    public static CarMake of(String name, String image, String logo, String description){
+    public static CarMake of(final String name, final String image, final String logo, final String description){
         try {
             return new CarMake(name, new FileInputStream(image), new FileInputStream(logo), description);
         } catch (IOException e) {
@@ -108,7 +108,7 @@ public class CarMake implements Comparable<CarMake> {
 
 
     @Override
-    public int compareTo(CarMake carMake) {
+    public int compareTo(final CarMake carMake) {
         return name.compareToIgnoreCase(carMake.getName());
     }
 
@@ -118,7 +118,7 @@ public class CarMake implements Comparable<CarMake> {
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(final Object obj){
         if(obj == null) return false;
         if(obj == this) return true;
         if(obj.getClass()  != getClass()){

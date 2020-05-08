@@ -319,22 +319,21 @@ public final class CarMakes {
 
 
     public static Pane getCarMakeDisplayRoot(){
-        List<Pane> containers = Arrays.asList(getAllCarMakeContainers());
-        HBox[] rows = split(containers, 3).stream()
+        final List<Pane> containers = Arrays.asList(getAllCarMakeContainers());
+        final HBox[] rows = split(containers, 3).stream()
                 .map(p -> new HBox(10, p.toArray(Pane[]::new)))
                 .toArray(HBox[]::new);
 
-        VBox root = new VBox(10, rows);
+        final VBox root = new VBox(10, rows);
         root.setPadding(new Insets(10, 10, 10, 10));
-
 
         return root;
     }
 
 
 
-    private static List<List<Pane>> split(List<Pane> list, int l){
-        List<List<Pane>> split = new ArrayList<>();
+    private static List<List<Pane>> split(final List<Pane> list, final int l){
+        final List<List<Pane>> split = new ArrayList<>();
 
         final int n = list.size();
         for(int i = 0; i < n; i += l){
@@ -344,7 +343,7 @@ public final class CarMakes {
         return split;
     }
 
-    private static Object getFieldValue(Field field){
+    private static Object getFieldValue(final Field field){
         try {
             return field.get(null);
         } catch (IllegalAccessException e) {

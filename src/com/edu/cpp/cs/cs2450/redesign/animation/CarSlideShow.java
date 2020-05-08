@@ -49,7 +49,7 @@ public class CarSlideShow {
     public Pane getRoot(){ return root; }
 
     private void init(){
-        for(String path : paths){
+        for(final String path : paths){
             try {
                 slides.add(new ImageView(new Image(new FileInputStream(path))));
             } catch (IOException e){
@@ -57,7 +57,7 @@ public class CarSlideShow {
             }
         }
 
-        for(ImageView slide : slides){
+        for(final ImageView slide : slides){
             slide.setFitHeight(100 * 3);
             slide.setFitWidth(170 * 3);
             slide.setPreserveRatio(true);
@@ -65,17 +65,17 @@ public class CarSlideShow {
     }
 
     public void start(){
-        SequentialTransition slideshow = new SequentialTransition();
+        final SequentialTransition slideshow = new SequentialTransition();
         slideshow.setCycleCount(Animation.INDEFINITE);
 
         Collections.shuffle(slides);
 
-        for(ImageView slide : slides){
-            SequentialTransition sequentialTransition = new SequentialTransition();
+        for(final ImageView slide : slides){
+            final SequentialTransition sequentialTransition = new SequentialTransition();
 
-            FadeTransition fadeIn = getFadeTransition(slide, 0.0, 1.0);
-            PauseTransition stayOn = new PauseTransition(Duration.millis(2000));
-            FadeTransition fadeOut = getFadeTransition(slide, 1.0, 0.0);
+            final FadeTransition fadeIn = getFadeTransition(slide, 0.0, 1.0);
+            final PauseTransition stayOn = new PauseTransition(Duration.millis(2000));
+            final FadeTransition fadeOut = getFadeTransition(slide, 1.0, 0.0);
 
             sequentialTransition.getChildren().addAll(fadeIn, stayOn, fadeOut);
             slide.setOpacity(0);
@@ -86,8 +86,8 @@ public class CarSlideShow {
         slideshow.play();
     }
 
-    private FadeTransition getFadeTransition(ImageView imageView, double fromValue, double toValue) {
-        FadeTransition ft = new FadeTransition(Duration.millis(2000), imageView);
+    private FadeTransition getFadeTransition(final ImageView imageView, final double fromValue, final double toValue) {
+        final FadeTransition ft = new FadeTransition(Duration.millis(2000), imageView);
         ft.setFromValue(fromValue);
         ft.setToValue(toValue);
 
