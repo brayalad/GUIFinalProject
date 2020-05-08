@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.cpp.cs.cs2450.redesign.controller.FXMLDocumentController">
+   <center>
+      <ScrollPane fx:id="scroll" hbarPolicy="NEVER" prefHeight="2000.0" prefWidth="1019.0" style="-fx-background-color: white;">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: white;">
+               <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="105.0" layoutX="-1.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#072d54" />
+                              <Stop color="#072d54" offset="0.007662835249042145" />
+                              <Stop color="#0e5794" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle fill="WHITE" height="44.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Rectangle>
+                  <HBox alignment="CENTER_RIGHT"  style="-fx-background-color: white;" prefWidth="1000" prefHeight="50">
+                     <MenuBar style="-fx-background-color: white;">
+                        <Menu text="Home" style="-fx-text-fill: white;"/>
+                        <Menu text="Cars" style="-fx-text-fill: white;"/>
+                        <Menu text="Vans" style="-fx-text-fill: white;"/>
+                        <Menu text="Customers" style="-fx-text-fill: white;"/>
+                        <Menu text="About Ling" style="-fx-text-fill: white;"/>
+                        <Menu text="Fun Stuff" style="-fx-text-fill: white;"/>
+                        <Menu text="Free Stuff" style="-fx-text-fill: white;"/>
+                        <Menu text="Live Staff" style="-fx-text-fill: white; "/>
+                     </MenuBar>
+                  </HBox>
+                  <Label fx:id="label" layoutX="108.0" layoutY="5" minHeight="16" minWidth="69" style="-fx-font-weight: bold;" text="Ling's Cars" textFill="#d70c0c">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <!--
+                  <Label fx:id="label1" layoutX="264.0" layoutY="14.0" minHeight="16" minWidth="69" style="-fx-font-weight: bold;" text="Leader of the Pack - The UK's favorite car leasing website!" />
+                  -->
+                  <Label fx:id="label11" layoutX="107.0" layoutY="80.0" minHeight="16" minWidth="60.0" prefHeight="55.0" prefWidth="164.0" style="-fx-font-weight: bold;" text="Find Your">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Label fx:id="label111" layoutX="124.0" layoutY="186.0" minHeight="16" minWidth="69" text="It's the low rate dealers offer Internet shoppers...">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="label1111" layoutX="164.0" layoutY="232.0" minHeight="16" minWidth="69" text="Payments Can Be" textFill="#431c86">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e5794" height="373.0" layoutX="-1.0" layoutY="373.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0" />
+                  <ComboBox fx:id="makeCombo" layoutX="165.0" layoutY="306.0" prefWidth="150.0" promptText="Select a Make" style="-fx-background-color: white;" />
+                  <ComboBox fx:id="modelCombo" layoutX="336.0" layoutY="306.0" prefWidth="150.0" promptText="Select a Model" style="-fx-background-color: white;" />
+                  <TextField layoutX="505.0" layoutY="306.0" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: white;" />
+                  <Label layoutX="377.0" layoutY="846.0" prefHeight="32.0" prefWidth="169.0" text="ENTER YOUR ZIP" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="647.0" layoutY="295.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="251.0" style="-fx-font-size: 15; -fx-font-weight: bold; -fx-background-color: #ffd700; -fx-arc-height: 30; -fx-arc-width: 30;" text="GET STARTED " />
+
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1239.0" layoutY="746.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1019.0" />
+
+                  <Label layoutX="395.0" layoutY="6600.0" text="©2020 LingsCars.com™. All rights reserved." />
+                  <TextArea accessibleRole="IMAGE_VIEW" mouseTransparent="true" focusTraversable="false" editable="false" layoutX="127.0" layoutY="6250.0" prefHeight="283.0" prefWidth="767.0" text="Car and Vehicle leasing is the leasing of the use of a car for a fixed period of time. It is a cost-effective alternative to car or vehicle purchase. It can be known as PCP or contract hire. &#10;The key difference in a car lease is that after the lease expires, the customer can return the car or vehicle to the dealer for no cost, or can often buy it at an agreed price. Ling owns &#10;the UK’s favourite car leasing company.&#10;&#10;Rationale:&#10;Car Leasing offers big advantages to customers. For the lease buyer, lease payments will usually be lower than payments on a car loan would be and qualification is usually easier. &#10;Some very cheap car leasing deals are available, but these change all the time. Some consumers may prefer leasing as it allows them to simply return a car and select a new model &#10;when the lease expires, allowing a consumer to drive a new vehicle every few years without the responsibility of selling the old car. It’s a very simple car owning solution. A car leasing &#10;customer does not have to worry about the future value of the car or vehicle, while a vehicle owner does have this nagging doubt.&#10;&#10;For the leasing company, leasing generates income from a vehicle the car leasing company still owns and will be able to sell at auction or lease again once the original lease has expired. &#10;As consumers will typically use a leased vehicle for a shorter period of time than one they buy outright, leasing may generate repeat customers more quickly, which may fit into various&#10; aspects of a finance company’s business model.&#10;&#10;Car Lease agreement:&#10;Car leasing agreements typically stipulate an early termination fee and limit the number of miles a customer can drive (for passenger cars, a common mileage is 10,000 to 15,000 miles per&#10; year of the car lease). If the mileage allowance is exceeded, a per-mile fee is charged. Customers can negotiate a higher mileage allowance, for a higher lease payment. Car lease agreements&#10; usually specify how much wear and tear on the vehicle is allowable, and the customer may face a fee if the car is not in good condition at the end of the lease.&#10;&#10;At the end of a leasing term, the customer must either return the car or vehicle to the car leasing company, or purchase it. The end of lease price is usually agreed upon when the lease is&#10; signed but may be affected by car condition and mileage.">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </TextArea>
+
+
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="128.0" layoutX="112.0" layoutY="399.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="369.0" />
+                  <Polygon fill="WHITE" layoutX="451.0" layoutY="579.0" points="-61.0, -60.0, -108.0, -18.0, -17.0, -60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1c81d3" layoutX="238.0" layoutY="602.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Pane fx:id="slider" layoutX="500.0" layoutY="380.0" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="180.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Ling-2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="138.0" layoutY="413.0" prefHeight="17.0" prefWidth="323.0" text="&quot;I'll Find You A Car Quickly. ">
+                     <font>
+                        <Font name="Cambria Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="137.0" layoutY="444.0" text="But Don't Be Too Fussy... ">
+                     <font>
+                        <Font name="Cambria Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="475.0" text="If The Virus Means You Need To Cancel, I'll Fully Support You!&quot;">
+                     <font>
+                        <Font name="Cambria Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="368.0" layoutY="592.0" text="Ling Valentine" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="368.0" layoutY="634.0" text="United Kingdom" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="142.0" layoutY="778.0" style="-fx-font-weight: bold;" text="Explore Makes">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+
+                  <VBox fx:id="cars" layoutX="142.0" layoutY="850.0" spacing="10"/>
+
+
+                  <Label fx:id="label11111" layoutX="517.0" layoutY="287.0" minHeight="16" minWidth="69" style="-fx-font-weight: bold;" text="ENTER YOUR ZIP" textFill="#fcfafa" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="524.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/car1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="607.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/car2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="707.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/car3.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="label112" layoutX="247.0" layoutY="83.0" minHeight="16" minWidth="69" prefHeight="49.0" prefWidth="351.0" style="-fx-font-weight: bold;" text="Lowest Possible Lease" textFill="#5533d0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label1121" layoutX="108.0" layoutY="122.0" minHeight="16" minWidth="69" prefHeight="43.0" prefWidth="199.0" style="-fx-font-weight: bold;" text="on a new Car!">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Line endX="161.0" layoutX="248.0" layoutY="174.0" startX="-126.0" />
+                  <Label fx:id="label11112" layoutX="129.0" layoutY="207.0" minHeight="16" minWidth="69" text="Discover How Low Your" textFill="#431c86">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
